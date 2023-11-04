@@ -1,0 +1,61 @@
+.CryptoDonation {
+  margin: 70px 50px 80px 50px;  
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  margin: auto auto 50px auto;
+}
+
+.CryptoDonation h1 {
+  margin: 5px auto;
+  display: table;
+  padding-bottom: 20px;
+}
+
+.CryptoDonation-form {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .CryptoDonation-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .CryptoDonation-form input[type="text"],
+  .CryptoDonation-form input[type="email"],
+  .CryptoDonation-form input[type="number"],
+  .CryptoDonation-form select {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .CryptoDonation-form button {
+    background-color: rgb(68, 8, 68);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .CryptoDonation-form button:hover {
+    background-color: #813e8e;
+  }
+  

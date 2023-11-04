@@ -1,0 +1,10 @@
+
+.about-page-container {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    margin: auto 80px
+}

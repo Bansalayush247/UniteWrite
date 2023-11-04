@@ -1,0 +1,98 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+.dashboard-outlet {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  min-height: 85vh;
+  width: 100%;
+}
+  
+/* The side navigation menu */
+.dashboard-sidebar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    background-color: #17253f;
+    left: 0;
+    width: 220px;
+    overflow: auto;
+  }
+  
+  /* Sidebar links */
+  .dashboard-sidebar-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 23px;
+    text-decoration: none;
+  }
+  
+  /* Active/current link */
+  /* .sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+  } */
+  
+  /* Links on mouse-over */
+  /* .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  } */
+
+  .dashboard-sidebar-container a:hover {
+    background-color: rgb(197, 232, 244);
+    color: black;
+  }
+
+  
+  /* Page content */
+  .dashboard-container main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  /* @media screen and (max-width: 700px) {
+    .dashboard-sidebar-container {
+      width: 100%;
+      height: auto;
+      position: relative;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+    .dashboard-sidebar-container a {
+      margin-right: 10px;
+      flex-grow: 1;
+    }
+    .dashboard-container main {
+      margin-left: 0;
+    }
+  } */
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  /* @media screen and (max-width: 400px) {
+    .dashboard-sidebar-container {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      padding: 10px;
+    }
+    .dashboard-sidebar-container a {
+      margin-bottom: 10px;
+      flex-grow: 1;
+    }
+  } */
+  

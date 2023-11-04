@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+/*========== NAVBAR ==========*/
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: rgb(68, 8, 68);
+    color: #fff;
+    z-index: 100;
+}
+
+.nav-links {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logo a {
+    font-size: 35px;
+    font-family: 'Gideon Roman', sans-serif;
+    color: #fff;
+}
+
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu li:hover {
+    background-color: #4c949e;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.menu li {
+    padding: 12px 14px;
+}
+
+.my-account-link {
+    position: relative;
+}
+
+.dropdown {
+    background-color: black;
+    padding: 1em 0;
+    position: absolute; /*with respect to parent*/
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+}
+
+.dropdown li + li {
+    margin-top: 10px;
+}
+
+.dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+}
+
+.dropdown li:hover {
+    background-color: #4c949e;
+}
+
+.my-account-link:hover .dropdown {
+    display: block;
+    transition: 0.3em ease;
+}
+
+/*introduce responsive design*/
+/*checkbox hack*/
+input[type=checkbox] {
+    display: none;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+/*applying media queries*/
+@media (max-width: 850px) {
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: black;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    .menu li:hover {
+        display: inline-block;
+        background-color: #4c949e;
+        transition: 0.3s ease;
+    }
+
+    .menu li + li {
+        margin-top: 12px;
+    }
+
+    input[type=checkbox]:checked ~ .menu {
+        display: block;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .dropdown {
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+    }
+
+    .dropdown li:hover {
+        background-color: #4c949e;
+    }
+}
+
+/*========== NAVBAR END ==========*/
+
+/*========== SEARCH BAR ==========*/
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.search-bar-container {
+    z-index: 90;
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    padding: 1% 1.5%;
+    backdrop-filter: blur(4px) saturate(180%);
+}
+
+.search-bar-container input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 1% 1.5%;
+    font-size: 20px;
+    color: white;
+}
+
+.search-bar-container button img {
+    width: 25px;
+}
+
+.search-bar-container button {
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar-container button:hover {
+    transition: 0.3s ease;
+    width: 65px;
+    height: 65px;
+}
+
+@media screen and (max-width: 600px) {
+    .search-bar-container button {
+        width: 50px; 
+        height: 50px; 
+        font-size: 14px; 
+    }
+
+    .search-bar-container input {
+        font-size: 16px;
+    }
+
+    .search-bar-container button:hover {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .search-bar-container {
+        left: 50%;
+        width: 75%;
+    }
+}
+
+/*========== SEARCH BAR END ==========*/
+
+/*========== CAROUSEL BUTTONS ==========*/
+
+.homepage-carousel-button-container {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 17%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    .homepage-carousel-button-container {
+        flex-direction: column;
+        top: 14%;
+    }
+
+    .create-post-button, .dashboard-button {
+        height: 40px;
+    }
+}
+
+.create-post-button, .dashboard-button {
+    background: #4c949e;
+    border: none;
+    height: 65px;
+    font-size: large;
+    font-weight: 550;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 45px;
+    margin: 10px 25px;
+}
+
+.create-post-button:hover, .dashboard-button:hover {
+    border-radius: 5px;
+    transition: 0.3s ease;
+    padding: 37px 47px;
+    top: 15%;
+    opacity: 1;
+}
+
+.gradient {
+    background: linear-gradient(-45deg, #2f90e4, #491f9d, #c2b016, #ae2016, rgb(76, 193, 76));
+    background-size: 400% 400%;
+    animation: bg-gradient 11s ease infinite;
+}
+
+@keyframes bg-gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/*========== CAROUSEL BUTTONS END ==========*/
+
+/*========== CAROUSEL CAPTION ==========*/
+
+.carousel h4, p {
+    color: white;
+    opacity: 0.72;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*========== CAROUSEL CAPTION END ==========*/
+
+/*========== DIVIDERS ==========*/
+
+.solid-divider {
+    border-top: 2.7px solid #4c949e;
+    margin-top: 0;
+    opacity: 1;
+}
+
+/*========== DIVIDERS END ==========*/
+
+/*========= HEADINGS ==========*/
+
+.recent-articles-heading {
+    margin-top: 80px;
+    margin-left: 20px;
+    margin-right: 75%;
+    background-color: #4c949e;
+    color: white;
+    display: inline-flex;
+    margin-bottom: 0;
+    padding: 8px;
+}
+
+/*========== HEADINGS END ==========*/
+
+/*========== RECENT ARTICLES ==========*/
+
+.recent-article-cards-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.recent-article-cards-container::-webkit-scrollbar {
+    display: none;
+}
+
+.article-card {
+    flex: 0 0 auto;
+    padding: 10px;
+}
+
+.homepage-spinner {
+    margin: 9.5% auto;
+}
+
+/*========== RECENT ARTICLES END ==========*/
+
+/*========== FOOTER ==========*/
+
+.footer-container {
+    margin: auto 0;
+    padding: 40px 0 20px;
+    text-align: center;
+    background-color: rgb(97, 8, 101);
+    position: relative;
+  }
+  
+.footer-container a {
+    color: #11999E;
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px 20px;
+    text-decoration: none;
+}
+  
+.footer-container a:hover {
+    color: #EAF6F6;
+}
+
+.footer-container p {
+    margin: 30px 0px 20px 0px;
+    color: rgb(197, 193, 193);
+}
+
+/*========== FOOTER END ==========*/
+

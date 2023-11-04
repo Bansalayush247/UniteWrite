@@ -1,0 +1,71 @@
+.profile-page-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: white;
+}
+
+.profile-page-heading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #2bcf06, #291257, #b1a328, #971313);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.profile-page-container h1 {
+    margin: 40px auto;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    opacity: 1;
+}
+
+.profile-page-container hr {
+    opacity: 1;
+    border: 0;
+    border-top: 1px solid black;
+    margin: 0 0 30px 0;
+}
+
+.profile-account-container {
+    display: flex;
+    flex-direction: row;
+    margin: 2px 10px;
+    padding: 10px 50px;
+    border: 2px solid black;
+}
+
+.profile-account-container-div {
+    display: flex;
+    flex-direction: column;
+    margin: auto auto auto 40px;
+}
+
+.profile-account-container-div-heading {
+    color: rgb(9, 165, 9);
+    font-weight: bolder;
+}
+
+.profile-account-container-div-content {
+    font-weight: bold;
+}
+
+.profile-account-container-div-content span {
+    color: maroon;
+}
